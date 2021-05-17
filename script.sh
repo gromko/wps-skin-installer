@@ -15,7 +15,7 @@ import os, urllib.request, shutil
 
 
 # Variables #
-wps_path = "/var/lib/flatpak/app/com.wps.Office/x86_64/stable/active/files/extra/wps-office/office6/skins"
+wps_path = "/opt/kingsoft/wps-office/office6/skins"
 skins=['All Green', 'Dark (Buggy)', 'Green Cat', 'Green Soldiers', 'Midnight Gray', 'Office-like', 'Pink', 'Pink 2', 'Blocky', 'Modern', 'Teacher', 'Yellow Autumn', 'Yellow Cat']
 
 
@@ -70,7 +70,7 @@ def main():
     
     # Checking if WPS Office (flatpak version) exists
     if not os.path.exists(wps_path):
-        deco("WPS Office is either not installed or you have a different version.\nPlease note that this script will only work with the FLATPAK version of WPS-Office.\nRun: flatpak install com.wps.Office", top=False)
+        deco("WPS Office is either not installed or you have a different version.\nPlease note that this script will only work with the skins directory of WPS Office: /opt/kingsoft/wps-office/office6/skins\nChange path for you WPS Office version", top=False)
 
     else:
         print(f"Choose a skin:")
